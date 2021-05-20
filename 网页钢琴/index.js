@@ -210,7 +210,7 @@ function change() {
                 records = 1;
                 bac.style.opacity = 0;
                 box.style.opacity = 0;
-                boxup.style.opacity = 0;
+                boxup.style.opaciconsole
                 bac.style.opacity = 0;
                 let box1 = document.getElementById("box1");
                 box1.style.zIndex = 7;
@@ -224,8 +224,8 @@ function change() {
 
         }
 
-        sleep(50).then(() => {
-            continue
+        sleep(50).then(()) => {
+            console.log("test")
         })
 
     }
