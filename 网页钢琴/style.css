@@ -136,6 +136,20 @@ body {
   /*background-color: blueviolet;*/
   transition: 2s;
 }
+a:hover{
+    color: pink
+}
+.Change{
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+}
+.change{
+    color: rgba(98, 171, 211, 0.7);
+    width: 20%;
+    height: 20%;
+    text-decoration:none;
+}
 #boxl {
   margin-right: 10px;
   padding: 0;

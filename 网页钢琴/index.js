@@ -65,9 +65,7 @@ let k = {
     a: 0, b: 1, c: 2, d: 3, e: 4, f: 5, g: 6, h: 7, i: 8, j: 9, k: 10, l: 11, m: 12, n: 13, o: 14, p: 15, q: 16, r: 17, s: 18, t: 19, u: 20, v: 21, w: 22, x: 23, y: 24, z: 25,
     A: 0, B: 1, C: 2, D: 3, E: 4, F: 5, G: 6, H: 7, I: 8, J: 9, K: 10, L: 11, M: 12, N: 13, O: 14, P: 15, Q: 16, R: 17, S: 18, T: 19, U: 20, V: 21, W: 22, X: 23, Y: 24, Z: 25
 }
-if (love == 1) {
-    i = k[0]
-}
+
 let a = [
     { name: "A", yin: 8, str: "<br><br><br>我喜欢你，不分日夜，我喜欢你，无关其他，喜欢便是喜欢，多一点不行，少一点也不可以。<br><br>那些都是关于你的声音。以及，找一下声音里关于你的线索。" },
     { name: "B", yin: 2, str: `<br><br><br>若逢新雪初霁，满月当空<br>下面平铺着皓影，上面流转着亮银，<br><br>而你带笑地向我走来，<br><br>月色和雪色之间 ，是第三种绝色 ，<br><br>与我而言， 日月星辉之中，你是第四种难得。` },
@@ -176,17 +174,49 @@ function fl(e) {
         }
     }
 }
-function sleep(time) {
-    return new Promise((resolve) => setTimeout(resolve, time));
-}
+
 let onclicks = false
 function change() {
     onclicks = true
-    for (var i in k) {
-        let p = a[k[i]]
-        console.log(p['str'])
+    love+=1
+if(love==1){ pp = a[k['a']]}
+else if(love==2){pp = a[k['b']]}
+else if(love==3){pp = a[k['c']]}
+else if(love==4){pp = a[k['d']]}
+else if(love==5){pp = a[k['e']]}
+else if(love==6){pp = a[k['f']]}
+else if(love==7){pp = a[k['g']]}
+else if(love==8){pp = a[k['h']]}
+else if(love==9){pp = a[k['i']]}
+else if(love==10){pp = a[k['j']]}
+else if(love==11){pp = a[k['k']]}
+else if(love==12){pp = a[k['l']]}
+else if(love==13){pp = a[k['m']]}
+else if(love==14){pp = a[k['n']]}
+else if(love==15){pp = a[k['o']]}
+else if(love==16){pp = a[k['p']]}
+else if(love==17){pp = a[k['q']]}
+else if(love==18){pp = a[k['r']]}
+else if(love==19){pp = a[k['s']]}
+else if(love==20){pp = a[k['t']]}
+else if(love==21){pp = a[k['u']]}
+else if(love==22){pp = a[k['v']]}
+else if(love==23){pp = a[k['w']]}
+else if(love==24){pp = a[k['x']]}
+else if(love==25){pp = a[k['y']]}
+else if(love==26){pp = a[k['z']]}
+else {alert("想说的话都说完了哦~")}
+
+
+
+
+
+
+
+       
+        console.log(pp['str'])
         let x = document.createElement("audio");
-        x.setAttribute("src", `./video/${p.yin}.mp3`);
+        x.setAttribute("src", `./video/${pp.yin}.mp3`);
         x.setAttribute("autoplay", "autoplay");
         let box = document.getElementById("box");
         let boxl = document.getElementById("boxl");
@@ -198,9 +228,9 @@ function change() {
         box.style.opacity = 0;
         boxup.style.opacity = 0;
         setTimeout(function () {
-            boxl.innerHTML = `${p.name}`;
-            boxr.innerHTML = `${p.str}`;
-            bac.style.background = `${b[k[i]]}`;
+            boxl.innerHTML = `${pp.name}`;
+            boxr.innerHTML = `${pp.str}`;
+            bac.style.background = `${b[pp]}`;
             box.style.opacity = 1;
             boxup.style.opacity = 1;
             bac.style.opacity = 1;
@@ -210,7 +240,7 @@ function change() {
                 records = 1;
                 bac.style.opacity = 0;
                 box.style.opacity = 0;
-                boxup.style.opaciconsole
+                boxup.style.opacity = 0;
                 bac.style.opacity = 0;
                 let box1 = document.getElementById("box1");
                 box1.style.zIndex = 7;
@@ -224,18 +254,10 @@ function change() {
 
         }
 
-        sleep(50).then(()) => {
-            console.log("test")
-        })
-
-    }
-
-    // console.log(onclicks)
 
 }
 
 
 window.onkeyup = fl;
-
 
 
