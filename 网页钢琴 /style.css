@@ -140,16 +140,21 @@ body {
 a:hover{
     color: pink
 }
-.Change{
-    position: absolute;
-    right: 10%;
-    bottom: 20%;
+.Change {
+  position: absolute;
+  right: 10%;
+  bottom: 20%;
 }
-.change{
-    color: rgba(98, 171, 211, 0.7);
-    width: 20%;
-    height: 20%;
-    text-decoration:none;
+.change {
+  color: rgba(98, 171, 211, 0.7);
+  width: 100rem;
+  height: 100rem;
+  right: 10%;
+  bottom: 20%;
+  text-decoration: none;
+  z-index: -999;
+  position: absolute;
+  background-color: rgba(219, 168, 192, 0);
 }
 #boxl {
   margin-right: 10px;
