@@ -151,7 +151,7 @@ a:hover {
   right: 10%;
   bottom: 20%;
   text-decoration: none;
-  z-index: -999;
+  z-index: 999;
   position: absolute;
   background-color: rgba(219, 168, 192, 0);
 }
